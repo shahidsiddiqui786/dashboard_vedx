@@ -1,10 +1,12 @@
 const TableBody = ({ tableData, columns ,query, status}) => {
     return (
       <tbody>
-        {tableData.filter(data => {
+        {// eslint-disable-next-line
+        tableData.filter(data => { 
           if(query === '') return data;
           else if(data.customer.toLowerCase().includes(query.toLowerCase()))
            return data;
+           // eslint-disable-next-line
         }).filter(data =>{
           if(status === '') return data;
           else if(data.status.toLowerCase() === status.toLowerCase())
